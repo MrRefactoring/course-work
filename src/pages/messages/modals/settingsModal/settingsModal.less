@@ -1,0 +1,72 @@
+.settings.modal {
+  visibility: hidden;
+  position: absolute;
+
+  width: 100%;
+  height: 100%;
+
+  transition: all 0s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+  background: rgba(0, 0, 0, 0);
+  z-index: 100;
+
+  .content {
+    width: 300px;
+    height: 100%;
+
+    transition: all 0s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transform: translateX(-350px);
+
+    background: #17212b;
+
+    .user.info {
+      width: 100%;
+      height: 150px;
+      background: #276899;
+    }
+
+    .actions {
+      margin-top: 10px;
+
+      .action {
+        display: flex;
+        padding: 10px 25px;
+        cursor: pointer;
+
+        .icon {
+          width: 24px;
+          height: 24px;
+          margin-right: 25px;
+        }
+
+        .text {
+          display: flex;
+          align-items: center;
+          color: white
+        }
+
+        &:hover {
+          background: #202b36;
+        }
+      }
+    }
+  }
+
+  &.opened {
+    visibility: visible;
+    background: rgba(0, 0, 0, 0.68);
+
+    .content {
+      transform: translateX(0);
+    }
+  }
+}
+
+.icon.logout {
+  content: url(../../../../assets/logout.svg);
+}
+
+.icon.search {
+  content: url(../../../../assets/search.svg);
+}
+

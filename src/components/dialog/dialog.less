@@ -1,0 +1,63 @@
+.dialog.item {
+  width: 100%;
+  display: flex;
+  position: relative;
+
+  width: 100%;
+
+  padding: 9px;
+  color: white;
+  cursor: pointer;
+
+  .avatar {
+    width: 45px;
+    height: 45px;
+    margin-right: 9px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 100%;
+    }
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    .last.message {
+      width: 270px;
+
+      font-size: 14px;
+      color: rgba(255, 255, 255, 0.68);
+
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+  .close.icon {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+
+    cursor: pointer;
+
+    width: 15px;
+    height: 15px;
+
+    content: url('../../assets/cancel.svg')
+  }
+
+  &.selected {
+    background: #2b5278 !important;
+    cursor: default;
+  }
+
+  &:hover {
+    background: #202b36;
+  }
+}

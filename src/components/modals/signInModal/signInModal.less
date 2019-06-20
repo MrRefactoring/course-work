@@ -1,0 +1,165 @@
+@import '../../../variables.less';
+@import '../common.less';
+
+.sign-in.modal {
+  display: none;
+  position: absolute;
+  z-index: 1000;
+
+  height: 100%;
+  width: 100%;
+  background: #ffffffc7; // TODO use @color-dimmer. Temporary solution. Use the screen to illuminate the face
+
+  &.opened {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  & > .content {
+    z-index: 1001;
+    position: relative;
+    width: 440px;
+    height: auto;
+    background: white;
+    border-radius: @border-radius;
+
+    .signin.form {
+      padding: 40px;
+    }
+
+    .control.panel {
+      display: inline-block;
+
+      background: @color-indigo-500;
+
+      width: 100%;
+
+      color: #fff;
+      text-align: center;
+
+      border-bottom: none;
+      padding: 20px 39px;
+      border-radius: 0 0 @border-radius @border-radius;
+
+      cursor: pointer;
+    }
+
+    .face.recognition #canvas {
+      width: 440px;
+      height: 500px;
+      border-radius: 25px 25px 0 0;
+    }
+  }
+}
+
+@media (min-width: 768px){
+  .sign-in.modal > .content {
+    width: auto;
+    height: auto;
+
+    .face.login {
+      width: 500px;
+      height: 558px;
+    }
+
+    .canvas.container {
+      width: 500px;
+      height: 500px;
+    }
+
+    #canvas {
+      width: 500px;
+      height: 558px;
+    }
+
+    .classic.login {
+      width: 300px;
+      height: 300px;
+    }
+
+    .signin.form {
+      width: 300px;
+      height: 300px;
+      padding: 30px;
+
+      .submit > a {
+        margin-top: 12px;
+      }
+    }
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px){
+  .sign-in.modal > .content {
+    width: auto;
+    height: auto;
+
+    .face.login {
+      width: 300px;
+      height: 358px;
+    }
+
+    .canvas.container {
+      width: 300px;
+      height: 300px;
+    }
+
+    #canvas {
+      width: 300px;
+      height: 358px;
+    }
+
+    .classic.login {
+      width: 280px;
+      height: 300px;
+    }
+
+    .signin.form {
+      width: 280px;
+      height: 300px;
+      padding: 28px;
+
+      .submit > a {
+        margin-top: 12px;
+      }
+    }
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px){
+  .sign-in.modal > .content {
+    width: auto;
+    height: auto;
+
+    .face.login {
+      width: 250px;
+      height: 308px;
+    }
+    .canvas.container {
+      width: 250px;
+      height: 250px;
+    }
+
+    #canvas {
+      width: 250px;
+      height: 308px;
+    }
+
+    .classic.login {
+      width: 250px;
+      height: 310px;
+      }
+
+    .signin.form {
+      width: 250px;
+      height: 310px;
+      padding: 25px;
+
+      .submit > a {
+        margin-top: 12px;
+      }
+    }
+  }
+}
+
